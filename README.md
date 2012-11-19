@@ -8,6 +8,10 @@ This is a Moonshine plugin to manage dnsmasq, which is a handy way to deal with 
 
 ## Configuration
 
+Add this to your manifest:
+
+<pre><code>include Moonshine::Dnsmasq</code></pre>
+
 There's only one configuration option currently, so here's what your dnsmasq section in moonshine.yml should look like:
 
 <pre><code>:dnsmasq:
