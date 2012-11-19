@@ -8,13 +8,10 @@ module Moonshine
     end
   
     module ClassMethods
-      
-      def resolv_conf
-        
-      end
-      
+            
       def dnsmasq(options = {})
-        cache_size = options[:cache_size] || configuration[:cache_size] || 256
+        configure(:dnsmasq => {})
+        cache_size = configuration[:dnsmasq][:cache_size] || 256
         
         package 'dnsmasq',
           :ensure => :installed
